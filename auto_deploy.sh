@@ -38,3 +38,4 @@ cd "${BASE_DIR}/${WORKDIR}" && sudo docker-compose up -d
 WORKDIR="kanban-backend"
 cd "${BASE_DIR}/${WORKDIR}" && sudo docker-compose up -d
 
+echo "[+] You can see the project running at http://localhost/!"
