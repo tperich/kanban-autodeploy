@@ -40,4 +40,5 @@ cd "${BASE_DIR}/${WORKDIR}" && sudo docker-compose up -d
 
 sudo docker exec -t kanban-laravel chown -R www-data:www-data /app
 sudo docker exec -t kanban-laravel composer install
+sleep 2
 sudo docker exec -t kanban-laravel php artisan migrate:fresh --seed
