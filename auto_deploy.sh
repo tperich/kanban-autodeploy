@@ -38,4 +38,8 @@ cd "${BASE_DIR}/${WORKDIR}" && sudo docker-compose up -d
 WORKDIR="kanban-backend"
 cd "${BASE_DIR}/${WORKDIR}" && sudo docker-compose up -d
 
-echo "[+] You can see the project running at http://localhost/!"
+sudo docker exec -t kanban-laravel chown -R www-data:www-data /app
+sudo docker exec -t kanban-laravel composer install
+sudo docker exec -t kanban-laravel php artisan migrate:fresh --seed
+
+echo "[+] Server up and running!"
