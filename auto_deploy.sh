@@ -33,8 +33,8 @@ fi
 
 # Deploy
 WORKDIR="kanban-frontend"
-cd "${BASE_DIR}/${WORKDIR}" && docker-compose up -d
+cd "${BASE_DIR}/${WORKDIR}" && sudo docker-compose up -d
 
 WORKDIR="kanban-backend"
-cd "${BASE_DIR}/${WORKDIR}" && docker-compose up -d
+cd "${BASE_DIR}/${WORKDIR}" && sudo docker-compose up -d
 
